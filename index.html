@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Prueba Bootstrap</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">Shaders</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#carouselExampleCaptions">Inicio</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#Paginas">Paginas</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Top 3
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#Complementary">Complementary</a></li>
+            <li><a class="dropdown-item" href="#Solas">Solas</a></li>
+            <li><a class="dropdown-item" href="#Nostalgia">Nostalgia</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://modrinth.com/shaders">Otros Shaders</a></li>
+        </ul>
+        </li>
+    </ul>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    </div>
+</div>
+</nav>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+<div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/05/crankermans-2694777.jpg?tf=3840x" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>#1 - Complementary Shaders</h5>
+        <p>Preserving the elements of Minecraft with exceptional quality, detail, and performance.</p>
+    </div>
+    </div>
+    <div class="carousel-item">
+    <img src="https://pbs.twimg.com/media/GEUoK3ebkAA5WoH.jpg:large" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>#2 - Solas Shader</h5>
+        <p>Preserving the elements of Minecraft with exceptional quality, detail, and performance.</p>
+    </div>
+    </div>
+    <div class="carousel-item">
+    <img src="https://pbs.twimg.com/media/GIZyJB-aoAA7R2h?format=jpg&name=4096x4096" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>#3 - Nostalgia Shader</h5>
+        <p>Preserving the elements of Minecraft with exceptional quality, detail, and performance.</p>
+    </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+</div>
+
+<div class="container text-center" id="Paginas">
+    <h2>Mejores Paginas</h2>
+<div class="row align-items-start">
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+<img src="{{ url_for('static', filename ='modrinth.jpg') }}" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">Modrinth</h5>
+    <p class="card-text">Plataforma moderna y de código abierto para alojar mods, datapacks, shaders y recursos de Minecraft. Se destaca por su interfaz limpia, velocidad y API abierta para desarrolladores.
+    No requiere un launcher especial, tiempos de descarga rápidos y apoyo a contenido para versiones nuevas y antiguas del juego.</p>
+    <a href="https://modrinth.com/shaders" class="btn btn-primary">Viajar Pagina</a>
+</div>
+</div>
+    </div>
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+<img src="{{ url_for('static', filename = 'curse.jpg' ) }}" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">Curse Forge</h5>
+    <p class="card-text">Plataforma muy popular y respaldada por Overwolf donde se pueden encontrar mods, modpacks, mapas y más para Minecraft (y otros juegos). Tiene su propio launcher.
+    Comunidad grande, integración con Twitch en el pasado, enorme biblioteca de contenido, y soporte directo con desarrolladores.</p>
+    <a href="https://www.curseforge.com/minecraft/search?page=1&pageSize=20&sortBy=relevancy&class=shaders" class="btn btn-primary">Viajar Pagina</a>
+</div>
+</div>
+    </div>
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+<img src="https://yt3.googleusercontent.com/6HEoE0QnvB_TA7Y6_QVvbHdyQ2grI2TGcUdW0bYi5ZlYSCRxw544qlyaOMCX9g40nkfBNX_u=s900-c-k-c0x00ffffff-no-rj" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">ZonaCraft</h5>
+    <p class="card-text">Sitio web en español enfocado en compartir mods, texturas, mapas y tutoriales para Minecraft, con contenido tanto creado por la comunidad como compartido de otras fuentes.
+    Interfaz en español, ideal para usuarios hispanohablantes, y con variedad de contenido traducido o adaptado.</p>
+    <a href="https://zonacraft.net/mc/shaders" class="btn btn-primary">Viajar Pagina</a>
+</div>
+</div>
+    </div>
+</div>
+</div>
+
+<section class="Section">
+<div class="Parte-I" id="Complementary">
+    <h4>1 - Coplementary Shaders</h4>
+    <p>Complementary Shaders es un paquete de sombreadores para Minecraft Java Edition con una atención al detalle excepcional, altos estándares de calidad y una optimización de primer nivel. Ofrece una gran cantidad de efectos de alta calidad, dos opciones de estilo visual predeterminadas, efectos personalizados para casi todos los bloques del juego, perfiles que van desde Potato hasta Ultra, y está diseñado para no interferir en la jugabilidad. Comenzó como una edición de BSL Shaders en 2018 y recibió innumerables actualizaciones importantes, incluyendo una reescritura completa para cumplir con los estándares de nuestra comunidad. Complementary Shaders se basa en los comentarios de los usuarios, por encima de cualquier otra cosa, y aún recibe actualizaciones regulares.</p>
+    <button><a href="https://modrinth.com/shader/complementary-reimagined" target="_blank">Ver Mas</a></button>
+</div>
+    <img src="https://cdn.modrinth.com/data/HVnmMxH1/images/26327bef581206670288bf7e1b1b5f411291f793.jpeg" alt="">
+</section>
+<section class="Section" id="Solas">
+<img src="https://cdn.modrinth.com/data/EpQFjzrQ/images/31238e19926aa8853a59714289d9410228de26e2.jpeg" alt="">
+<div class="Parte-I">
+    <h4>2 - Solas Shader</h4>
+    <p>Solas Shader es un paquete de sombreado (shader pack) para Minecraft: Java Edition, diseñado por Septonious. Combina una estética fantástica y cinematográfica con un rendimiento optimizado, buscando embellecer el juego sin sacrificar fluidez;
+        En versiones más exigentes o con combinación de mods, puede presentar problemas de rendimiento, aunque suele ser más optimizado que otros shaders complejos
+    </p>
+    <button><a href="https://modrinth.com/shader/solas-shader" target="_blank">Ver Mas</a></button>
+</div>
+</section>
+<section class="Section" id="Nostalgia">
+<div class="Parte-I">
+<h4>3 - Nostalgia Shader</h4>
+<p>Este shaderpack está diseñado para reproducir la apariencia de los shaderpacks "antiguos" de la época en que shadersmod era nuevo. Sin embargo, también se basa en ellos con nuevas características y un rendimiento superior. Casualmente, también tiene algunas similitudes con el ahora cancelado "Super Duper Graphics Pack".</p>
+<button><a href="https://modrinth.com/shader/nostalgia-shader" target="_blank">Ver Mas</a></button>
+</div>
+<img src="https://cdn.modrinth.com/data/xEItlMn3/images/2418479b5dc2f8c683eedda003cb803ed8838417.jpeg" alt="">
+</section>
+</body>
+</html>
